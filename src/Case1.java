@@ -4,37 +4,31 @@ import java.util.Scanner;
 public class Case1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Cześć, jak masz na imię? ");
+        String[] names=new String[] {"Ania", "Kasia", "Stefan", "Jan", "Wojtek"};
+        System.out.println("Hello, what is your name? ");
         String name = scanner.next();
-        System.out.println("Nazwisko? ");
+        System.out.println("...and what is your surname? ");
         String surname = scanner.next();
-        System.out.println("Ile masz lat? Bo jakoś tak młodo wyglądasz... ");
+        System.out.println("How old are you? You look so young... ");
         int age = scanner.nextInt();
         if (age < 18)
         {
-            System.out.println("Przykro mi, ale nie mogę Cię wpuścić " +name +surname);
+            System.out.println("Unfortunately, you can not enter to the club " +name+" "+surname);
         }
         else if (age >= 18 && age <= 25) {
-            System.out.print("Zapraszam " + name + surname);
-            System.out.println(" ,miłej zabawy 18-25!");
-            System.out.println("Masz darmowe piwo! ");
-            String[] names=new String[] {"Ania", "Kasia", "Stefan", "Jan", "Wojtek"};
+            System.out.print("Welcome " + name + " " + surname);
+            System.out.println(" ,have a good party !");
+            System.out.println("You get free beer! ");
             for (int i = 0; i < names.length; i++) {
                 if (name.equals(names[i])) {
                     System.out.print(names[i]);
-                    System.out.println(" dostajesz shota, gratulacje! ");
+                    System.out.println(" you have a free shot! ");
                 }
             }
         }
-        else if (age > 90)
+        else if (age > 25)
         {
-            System.out.print("Zapraszam "+name +surname);
-            System.out.println(" ,miłej zabawy!");
-
-        }
-        else if (age > 99)
-        {
-            System.out.println("Aby na pewno...?");
+            System.out.println("Welcome " + name + " " + surname + "You can enter to the club !");
         }
     }
 }
